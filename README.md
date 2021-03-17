@@ -20,6 +20,12 @@
 This is the example project used for the <a title="Mike.Works" href="https://mike.works">Mike.Works</a> <a title="TypeScript Fundamentals" href="https://mike.works/course/typescript-fundamentals-7832c19">TypeScript Fundamentals</a> course.
 </p>
 
+## Environment
+
+This course assumes that you're using a [POSIX](https://en.wikipedia.org/wiki/POSIX) development environment. If you're using macOS or Linux, you already have one of these!
+
+*If you wish to use windows, please setup [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/install-win10) (recommended) or [Cygwin](https://www.cygwin.com/).*
+
 ## Dependencies
 
 Make sure your system is set up with
@@ -28,6 +34,14 @@ Make sure your system is set up with
 - [Visual Studio Code](https://code.visualstudio.com/)
 - [TypeScript](https://www.typescriptlang.org/index.html#download-links) (should be globally installed)
 - [ESLint](https://eslint.org/docs/user-guide/getting-started#installation-and-usage) (should be globally installed)
+- (macOS Only) [Homebrew](http://brew.sh)
+
+### Recommended other tools
+
+While not strictly required, you may want the following tools to follow exactly what you see the instructor do
+
+* [`bat` - a modernized `cat` alternative](https://github.com/sharkdp/bat#installation)
+* [`tldr` - a "cliff's notes" alternative to man pages](https://tldr.sh/#installation)
 
 ## Project setup
 
