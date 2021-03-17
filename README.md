@@ -1,16 +1,3 @@
-<table align="center">
-  <tr>
-    <td align="center">
-      ⚠️ <strong>A NOTE ABOUT VERSIONS</strong> ️️️⚠️
-    </td>
-  </tr>
-  <tr>
-    <td>
-      This branch is for the 2.x version of this workshop released in 2019 (for TypeScript 3.x). If you're looking for the 1.x version, released in 2017, <a href="https://github.com/mike-works/typescript-fundamentals/tree/v1">click here</a>
-    </td>
-  </tr>
-</table>
-
 <p align='center'>
   <a href="https://mike.works" target='_blank'>
     <img height=40 src='https://assets.mike.works/img/login_logo-33a9e523d451fb0d902f73d5452d4a0b.png' />
@@ -25,18 +12,13 @@
   <a href="https://travis-ci.org/mike-works/typescript-fundamentals" title="Build Status">
     <img title="Build Status" src="https://travis-ci.org/mike-works/typescript-fundamentals.svg?branch=solutions"/>
   </a>
-  <a href="https://github.com/mike-works/typescript-fundamentals/releases" title="Version">
-    <img title="Version" src="https://img.shields.io/github/package-json/v/mike-works/typescript-fundamentals/v2.svg" />
+  <a href="https://github.com/mike-works/typescript-fundamentals-v4/releases" title="Version">
+    <img title="Version" src="https://img.shields.io/github/package-json/v/mike-works/typescript-fundamentals/master.svg" />
   </a>
 </p>
 <p align='center'>
 This is the example project used for the <a title="Mike.Works" href="https://mike.works">Mike.Works</a> <a title="TypeScript Fundamentals" href="https://mike.works/course/typescript-fundamentals-7832c19">TypeScript Fundamentals</a> course.
 </p>
-
-# Course outline and slides
-
-- [View course outline here](https://mike.works/course/typescript-fundamentals-7832c19)
-- [View slides here](https://docs.mike.works/typescript-slides-v2)
 
 ## Dependencies
 
@@ -90,6 +72,6 @@ understanding of how these licenses work:
 
 # Copyright
 
-&copy; 2018 [Mike.Works](https://mike.works), All Rights Reserved
+&copy; 2021 [Mike.Works](https://mike.works), All Rights Reserved
 
 ###### This material may not be used for workshops, training, or any other form of instructing or teaching developers, without express written consent

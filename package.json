@@ -1,32 +1,28 @@
 {
   "name": "@mike-works/typescript-fundamentals",
-  "version": "2.0.0",
-  "description": "Mike.Works typescript workshop",
+  "version": "4.0.0",
+  "description": "Mike.Works TypeScript 4 workshop",
   "repository": "https://github.com/mike-works/typescript-fundamentals",
   "author": "Mike North <michael.l.north@gmail.com> (https://mike.works)",
   "private": true,
   "devDependencies": {
-    "@commitlint/cli": "8.3.5",
-    "@commitlint/config-conventional": "8.3.4",
-    "@commitlint/travis-cli": "8.3.5",
     "@mike-works/js-lib-renovate-config": "2.0.0",
     "@mike-works/workshop-semantic-release-config": "1.0.0",
     "@types/chai": "4.2.15",
-    "@types/mocha": "5.2.7",
-    "@types/node": "12.19.16",
-    "@typescript-eslint/eslint-plugin": "2.34.0",
-    "@typescript-eslint/parser": "2.34.0",
-    "chai": "4.3.0",
-    "dtslint": "0.9.9",
-    "eslint": "6.8.0",
-    "husky": "3.1.0",
+    "@types/mocha": "^8.2.1",
+    "@types/node": "^14.14.35",
+    "@typescript-eslint/eslint-plugin": "^4.18.0",
+    "@typescript-eslint/parser": "^4.18.0",
+    "chai": "^4.3.4",
+    "dtslint": "^4.0.7",
+    "eslint": "^7.22.0",
     "lerna": "3.22.1",
-    "mocha": "6.2.3",
+    "mocha": "^8.3.2",
     "rimraf": "3.0.2",
-    "semantic-release": "15.14.0",
+    "semantic-release": "^17.4.2",
     "source-map-support": "0.5.19",
-    "ts-node": "8.10.2",
-    "typescript": "3.7.7"
+    "ts-node": "^9.1.1",
+    "typescript": "~4.2.3"
   },
   "workspaces": [
     "examples/*",
@@ -42,16 +38,6 @@
   },
   "release": {
     "extends": "@mike-works/workshop-semantic-release-config",
-    "branch": "v2"
-  },
-  "commitlint": {
-    "extends": [
-      "@commitlint/config-conventional"
-    ]
-  },
-  "husky": {
-    "hooks": {
-      "commit-msg": "./node_modules/.bin/commitlint -e $HUSKY_GIT_PARAMS"
-    }
+    "branch": "master"
   }
 }
