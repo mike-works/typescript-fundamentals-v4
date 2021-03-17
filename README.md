@@ -13,7 +13,7 @@
     <img title="Build Status" src="https://travis-ci.org/mike-works/typescript-fundamentals.svg?branch=solutions"/>
   </a>
   <a href="https://github.com/mike-works/typescript-fundamentals-v4/releases" title="Version">
-    <img title="Version" src="https://img.shields.io/github/package-json/v/mike-works/typescript-fundamentals/master.svg" />
+    <img title="Version" src="https://img.shields.io/github/package-json/v/mike-works/typescript-fundamentals-v4/master.svg" />
   </a>
 </p>
 <p align='center'>
