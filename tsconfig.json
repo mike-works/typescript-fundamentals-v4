@@ -1,9 +1,11 @@
 {
   "compilerOptions": {
+    "target": "ES2017",
     "noEmit": true,
     "strictNullChecks": true,
     "strict": true,
     "strictFunctionTypes": true,
+    "strictPropertyInitialization": true,
     "strictBindCallApply": true,
     "noUnusedLocals": false,
     "noUnusedParameters": false
