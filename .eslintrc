@@ -15,10 +15,34 @@
   "rules": {
     "@typescript/no-unused-vars": "off",
     "no-console": "off",
+    "no-prototype-builtins": "off",
     "no-debugger": "off",
     "no-unused-vars": "off",
     "no-undef": "off",
     "no-redeclare": "off",
     "prefer-const": "off"
-  }
+  },
+  "overrides": [
+    {
+      "files": ["challenges/json-types/test/*"],
+      "parserOptions": {
+        "project": "challenges/json-types/test/tsconfig.json"
+      }
+    }, {
+      "files": ["challenges/dict/test/*"],
+      "parserOptions": {
+        "project": "challenges/dict/tsconfig.json"
+      }
+    }, {
+      "files": ["challenges/advanced-types/test/*"],
+      "parserOptions": {
+        "project": "challenges/advanced-types/test/tsconfig.json"
+      }
+    }, {
+      "files": ["challenges/address-book/test/*"],
+      "parserOptions": {
+        "project": "challenges/address-book/tsconfig.json"
+      }
+    }
+  ]
 }

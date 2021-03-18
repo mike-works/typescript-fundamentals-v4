@@ -2,7 +2,8 @@ import { expect } from "chai";
 import { beforeEach, describe, it } from "mocha";
 import * as indexExports from "../src/index";
 
-describe("index.ts module", () => {
+describe("index.ts module", () =>
+ {
   // it("should have a Person export (type or interface)", () => {
   //   expect((indexExports as any).Person).to.eq(undefined);
   //   const x: indexExports.Person = {} as any;

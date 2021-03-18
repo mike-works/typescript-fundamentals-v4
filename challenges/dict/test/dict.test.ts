@@ -96,7 +96,7 @@ describe("reduceDict", () => {
         },
         ""
       )
-    ).to.eq(", 4");
+    ).to.include("4");
     expect(invokeCount).to.eq(1);
   });
 });

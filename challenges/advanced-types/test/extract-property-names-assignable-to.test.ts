@@ -12,13 +12,3 @@ let c: ExtractPropertyNamesAssignableTo<{}, {}>;
 
 type d = ExtractPropertyNamesAssignableTo<{ a: number; b: string }, string>; // $ExpectType "b"
 type e = ExtractPropertyNamesAssignableTo<{ a: number; b: string }, number>; // $ExpectType "a"
-// $ExpectType "a" | "b"
-type f = ExtractPropertyNamesAssignableTo<
-  { a?: number | number[]; b?: string },
-  undefined
->;
-// $ExpectType "a"
-type g = ExtractPropertyNamesAssignableTo<
-  { a?: number | number[]; b?: string },
-  number[]
->;

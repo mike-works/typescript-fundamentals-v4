@@ -2,5 +2,5 @@
   "compilerOptions": {
     "strict": true
   },
-  "include": ["src"]
+  "include": ["src", "test"]
 }

@@ -3,6 +3,7 @@
     "target": "esnext",
     "module": "commonjs",
     "outDir": "lib",
+    "lib": ["dom"],
     "strict": true,
     "strictBindCallApply": true,
     "strictFunctionTypes": true,
