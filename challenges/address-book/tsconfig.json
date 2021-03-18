@@ -3,8 +3,9 @@
     "allowJs": true,
     "checkJs": true,
     "strict": true,
+    "strictNullChecks": true,
+    "strictPropertyInitialization": true,
     "noImplicitAny": true,
-    "strictNullChecks": true
   },
   "include": ["src", "test"]
 }

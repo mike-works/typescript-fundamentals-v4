@@ -1,4 +1,5 @@
-import { JSONValue, JSONObject, JSONArray } from "json-types";
+import type { JSONValue, JSONObject, JSONArray } from "json-types";
+import  { analyzeThing } from "json-types";
 
 function isJSONValue(val: JSONValue) {}
 function isJSONArray(val: JSONArray) {}

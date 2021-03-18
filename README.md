@@ -55,8 +55,8 @@ While not strictly required, you may want the following tools to follow exactly 
 First, clone this project from Github
 
 ```
-git clone https://github.com/mike-works/typescript-fundamentals
-cd typescript-fundamentals
+git clone https://github.com/mike-works/typescript-fundamentals-v4
+cd typescript-fundamentals-v4
 ```
 
 Finally, while in the top-level folder of this project, download and install this project's dependencies by running

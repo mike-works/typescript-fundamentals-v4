@@ -39,5 +39,9 @@
   "release": {
     "extends": "@mike-works/workshop-semantic-release-config",
     "branch": "master"
+  },
+  "volta": {
+    "node": "14.16.0",
+    "yarn": "1.22.10"
   }
 }

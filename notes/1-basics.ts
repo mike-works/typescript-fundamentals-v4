@@ -1,24 +1,26 @@
 //== BASICS ==//
 
+import { PhoneNumberDict } from "./3-interface-type-basics";
+
 /**
  * (1) x is a string, b/c we’ve initialized it
  */
-// let x = "hello world";
+let x = "hello world";
 
 /**
  * (2) reassignment is fine
  */
-// x = "hello mars";
+x = "hello mars";
 
 /**
  * (3) but if we try to change type
  */
-// x = 42; // 🚨 ERROR
+x = 42; // 🚨 ERROR
 
 /**
  * (4) let's look at const. The type is literally 'hello world'
  */
-// const y = "hello world";
+const y = "hello world";
 
 /**
  * This is called a 'string literal type'. y can never be reassigned since it's a const,
@@ -29,9 +31,10 @@
 /**
  * (5) sometimes we need to declare a variable w/o initializing it
  */
-// let z;
-// z = 41;
-// z = "abc"; // (6) oh no! This isn't good
+let z;
+// try {} catch 
+z = 41;
+z = "abc"; // (6) oh no! This isn't good
 
 /**
  * If we look at the type of z, it's `any`. This is the most flexible type
@@ -42,51 +45,54 @@
  * (7) we could improve this situation by providing a type annotation
  * when we declare our variable
  */
-// let zz: number;
-// zz = 41;
-// zz = "abc"; // 🚨 ERROR Type 'string' is not assignable to type 'number'.
+let zz: number;
+zz = 41;
+zz = "abc"; // 🚨 ERROR Type 'string' is not assignable to type 'number'.
 
 //== SIMPLE ARRAYS ==//
 
 /**
  * (8) simple array types can be expressed using []
  */
-// let aa: number[] = [];
-// aa.push(33);
-// aa.push("abc"); // 🚨 ERROR: Argument of type 'string' is not assignable to parameter of type 'number'.
+let aa: number[] = [];
+aa.push(33);
+aa.push("abc"); // 🚨 ERROR: Argument of type 'string' is not assignable to parameter of type 'number'.
 
 /**
  * (9) we can even define a tuple, which has a fixed length
  */
-// let bb: [number, string, string, number] = [
-//   123,
-//   "Fake Street",
-//   "Nowhere, USA",
-//   10110
-// ];
+let bb: [number, string, string, number] = [
+  123,
+  "Fake Street",
+  "Nowhere, USA",
+  10110
+];
 
-// bb = [1, 2, 3]; // 🚨 ERROR: Type 'number' is not assignable to type 'string'.
+
+bb = [1, 2, 3]; // 🚨 ERROR: Type 'number' is not assignable to type 'string'.
 
 /**
  * (10) Tuple values often require type annotations (  : [number, number] )
  */
-// const xx = [32, 31]; // number[];
-// const yy: [number, number] = [32, 31];
+const xx = [32, 31]; // number[];
+const yy: [number, number] = [32, 31];
+
+console.log('foo');
 
 //== OBJECTS ==//
 
 /**
  * (11) object types can be expressed using {} and property names
  */
-// let cc: { houseNumber: number; streetName: string };
-// cc = {
-//   streetName: "Fake Street",
-//   houseNumber: 123
-// };
+let cc: { houseNumber: number; streetName: string };
+cc = {
+  streetName: "Fake Street",
+  houseNumber: 123
+};
 
-// cc = {
-//   houseNumber: 33
-// };
+cc = {
+  houseNumber: 33
+};
 /**
  * 🚨 Property 'streetName'
  * 🚨   is missing in type   '{ houseNumber: number; }'
@@ -97,18 +103,25 @@
  * (12) You can use the optional operator (?) to
  * indicate that something may or may not be there
  */
-// let dd: { houseNumber: number; streetName?: string };
-// dd = {
-//   houseNumber: 33
-// };
+let dd: { houseNumber: number; streetName?: string };
+dd = {
+  houseNumber: 33
+};
+// dd.streetName?.split(", ")
 
 // (13) if we want to re-use this type, we can create an interface
-// interface Address {
-//   houseNumber: number;
-//   streetName?: string;
-// }
+interface Address {
+  houseNumber: number;
+  streetName: string;
+}
+type Address2 = {
+    houseNumber: number;
+    streetName: string;
+  }
+
 // // and refer to it by name
-// let ee: Address = { houseNumber: 33 };
+let ee: Address = { houseNumber: 33, streetName: 'Fake Street' };
+ee = dd;
 
 //== UNION & INTERSECTION ==//
 
@@ -117,44 +130,53 @@
  * Sometimes we have a type that can be one of several things
  */
 
-// export interface HasPhoneNumber {
-//   name: string;
-//   phone: number;
-// }
+export interface HasPhoneNumber {
+  name: string;
+  phone: number;
+}
 
-// export interface HasEmail {
-//   name: string;
-//   email: string;
-// }
+export interface HasEmail {
+  name: string;
+  email: string;
+}
 
-// let contactInfo: HasEmail | HasPhoneNumber =
-//   Math.random() > 0.5
-//     ? {
-//         // we can assign it to a HasPhoneNumber
-//         name: "Mike",
-//         phone: 3215551212
-//       }
-//     : {
-//         // or a HasEmail
-//         name: "Mike",
-//         email: "mike@example.com"
-//       };
+const phoneDict: PhoneNumberDict;
+phoneDict.
 
-// contactInfo.name; // NOTE: we can only access the .name property  (the stuff HasPhoneNumber and HasEmail have in common)
+let contactInfo: HasEmail | HasPhoneNumber =
+  Math.random() > 0.5
+    ? {
+        // we can assign it to a HasPhoneNumber
+        name: "Mike",
+        phone: 3215551212
+      }
+    : {
+        // or a HasEmail
+        name: "Mike",
+        email: "mike@example.com"
+      };
+
+contactInfo.name; // NOTE: we can only access the .name property  (the stuff HasPhoneNumber and HasEmail have in common)
+
+if (isHasEmail(contactInfo)) {
+
+} else {
+    
+}
 
 /**
  * (15) Intersection types
  */
-// let otherContactInfo: HasEmail & HasPhoneNumber = {
-//   // we _must_ initialize it to a shape that's asssignable to HasEmail _and_ HasPhoneNumber
-//   name: "Mike",
-//   email: "mike@example.com",
-//   phone: 3215551212
-// };
+let otherContactInfo: HasEmail & HasPhoneNumber = {
+  // we _must_ initialize it to a shape that's asssignable to HasEmail _and_ HasPhoneNumber
+  name: "Mike",
+  email: "mike@example.com",
+  phone: 3215551212
+};
 
-// otherContactInfo.name; // NOTE: we can access anything on _either_ type
-// otherContactInfo.email;
-// otherContactInfo.phone;
+otherContactInfo.name; // NOTE: we can access anything on _either_ type
+otherContactInfo.email;
+otherContactInfo.phone;
 // const zzz: any = {} as never;
 
 export default {};
