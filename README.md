@@ -36,6 +36,12 @@ Make sure your system is set up with
 - [ESLint](https://eslint.org/docs/user-guide/getting-started#installation-and-usage) (should be globally installed)
 - (macOS Only) [Homebrew](http://brew.sh)
 
+## Another option for an environment: Codesandbox!
+CodeSandbox.io can be thought of as "vscode in a browser tab". Free accounts are full-featured!
+
+- [Click here](https://githubbox.com/mike-works/typescript-fundamentals-v4) to visit the sandbox
+- Login with your github account to create your own fork
+
 ### Recommended other tools
 
 While not strictly required, you may want the following tools to follow exactly what you see the instructor do
