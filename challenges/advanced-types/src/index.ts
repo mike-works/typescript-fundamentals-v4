@@ -20,11 +20,14 @@
 type ProblemMerge = { a: number; b: string } & { a: string; c: number[] };
 
 console.log(
-  Object.assign({ a: 44, b: "hello" }, { a: "from second object", c: 99 })
+  Object.assign({ a: 44, b: 'hello' }, { a: 'from second object', c: 99 })
 );
 
 // IMPLEMENT ME
-export type Mix<A, B> = never;
+export type Mix<A, B> = {
+  [K in Exclude<keyof A, keyof B>]: A[K];
+} &
+  B;
 
 /**
  * - ExtractPropertyNamesAssignableTo: obtain the names of properties assignable to a type
@@ -49,7 +52,9 @@ interface Foo {
 }
 
 // IMPLEMENT ME
-export type ExtractPropertyNamesAssignableTo<T, S> = never;
+export type ExtractPropertyNamesAssignableTo<T, S> = {
+  [K in keyof T]: T[K] extends S ? K : never;
+}[keyof T];
 
 type X = ExtractPropertyNamesAssignableTo<
   Window,
@@ -69,8 +74,13 @@ type X = ExtractPropertyNamesAssignableTo<
  *
  */
 
- // IMPLEMENT ME
-export type OptionalPropertyNamesOf<T> = never;
+// IMPLEMENT ME
+export type OptionalPropertyNamesOf<T> = Exclude<
+  {
+    [K in keyof T]: T extends Record<K, T[K]> ? never : K;
+  }[keyof T],
+  undefined
+>;
 
 /**
  * - RequiredPropertyNamesOf: Extract the property names of an object type that are required
@@ -84,5 +94,10 @@ export type OptionalPropertyNamesOf<T> = never;
  * 'a'
  */
 
- // IMPLEMENT ME
-export type RequiredPropertyNamesOf<T> = never;
+// IMPLEMENT ME
+export type RequiredPropertyNamesOf<T> = Exclude<
+  {
+    [K in keyof T]: T extends Record<K, Exclude<T[K], undefined>> ? K : never;
+  }[keyof T],
+  undefined
+>;
