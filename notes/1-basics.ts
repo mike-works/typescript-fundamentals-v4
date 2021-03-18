@@ -44,7 +44,7 @@
  */
 // let zz: number;
 // zz = 41;
-// zz = "abc"; // 🚨 ERROR Type '"abc"' is not assignable to type 'number'.
+// zz = "abc"; // 🚨 ERROR Type 'string' is not assignable to type 'number'.
 
 //== SIMPLE ARRAYS ==//
 
@@ -53,7 +53,7 @@
  */
 // let aa: number[] = [];
 // aa.push(33);
-// aa.push("abc"); // 🚨 ERROR: Argument of type '"abc"' is not assignable to parameter of type 'number'.
+// aa.push("abc"); // 🚨 ERROR: Argument of type 'string' is not assignable to parameter of type 'number'.
 
 /**
  * (9) we can even define a tuple, which has a fixed length
