@@ -26,6 +26,12 @@ This course assumes that you're using a [POSIX](https://en.wikipedia.org/wiki/PO
 
 *If you wish to use windows, please setup [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/install-win10) (recommended) or [Cygwin](https://www.cygwin.com/).*
 
+### Another option for an environment: Codesandbox!
+[CodeSandbox.io](https://codesandbox.io) can be thought of as "vscode in a browser tab". Free accounts are full-featured!
+
+- [Click here](https://githubbox.com/mike-works/typescript-fundamentals-v4) to visit the sandbox
+- Login with your github account to create your own fork
+
 ## Dependencies
 
 Make sure your system is set up with
@@ -36,11 +42,6 @@ Make sure your system is set up with
 - [ESLint](https://eslint.org/docs/user-guide/getting-started#installation-and-usage) (should be globally installed)
 - (macOS Only) [Homebrew](http://brew.sh)
 
-## Another option for an environment: Codesandbox!
-CodeSandbox.io can be thought of as "vscode in a browser tab". Free accounts are full-featured!
-
-- [Click here](https://githubbox.com/mike-works/typescript-fundamentals-v4) to visit the sandbox
-- Login with your github account to create your own fork
 
 ### Recommended other tools
 
